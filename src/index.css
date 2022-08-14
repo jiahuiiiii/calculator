@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Overpass Mono", monospace;
+}
+
+.disable-select {
+  user-select: none;
+}
+
+.calculator-shadow {
+  border-radius: 30px;
+  background: linear-gradient(145deg, #a5efdc, #8bc9b9);
+  box-shadow: 15px 15px 15px #88c4b5;
+}
+
+.input-shadow {
+  border-radius: 8px;
+  background: #9adfce;
+  box-shadow: inset 13px 13px 36px #84c0b1, inset -13px -13px 36px #b0feeb;
+}
+
+.key-shadow {
+  border-radius: 10px;
+  background: #9adfce;
+  box-shadow: 13px 13px 29px #8ccbbb, -13px -13px 29px #a8f3e1;
+}
+
+.c {
+  float: left;
+  width: 100vw;
+  height: 350px;
+  overflow: hidden;
+}
+
+.card-home {
+  position: absolute;
+  left: 0;
+  display: flex;
+  animation: scroll 10s linear 1s infinite;
+}
+
+.card-home > svg {
+  width: 100vw;
+}
+
+@keyframes scroll {
+  100% {
+    left: -100vw;
+  } /* top is the number of spans (in this case 8) multiplied by span height (45px as described above)*/
+}
